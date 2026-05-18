@@ -1642,6 +1642,8 @@ with pkgs;
 
   coreboot-configurator = libsForQt5.callPackage ../tools/misc/coreboot-configurator { };
 
+  intel-oneapi = recurseIntoAttrs (callPackage ../development/libraries/intel-oneapi { });
+
   intelLlvmStdenv = intel-llvm.stdenv;
 
   cambrinary = python3Packages.callPackage ../applications/misc/cambrinary { };
